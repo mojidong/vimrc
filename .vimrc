@@ -1,6 +1,9 @@
 """"""""""""""""""""""""""""""  basic settings
+language message zh_CN.UTF-8
+set go=
 set nocompatible
 set nu 
+set cul
 set encoding=utf-8
 set fileencodings=utf-8,gb18030,gbk,utf-16
 set fileencoding=utf-8
@@ -26,7 +29,11 @@ set shiftwidth=4
 set expandtab
 set textwidth=80
 set cc=+1
-set guifont=Source\ Code\ Pro\ for\ Powerline\ 12
+if has("gui_mac")
+    set guifont=Sauce\ Code\ Powerline\ 12
+elseif has("gui_win32")
+    set guifont=Sauce_Code_Powerline:h12
+endif
 syntax on
 let mapleader = ","
 let maplocalleader = ","
@@ -136,4 +143,7 @@ set backupskip=/tmp/*,/private/tmp/*
 augroup CM
     au!
     autocmd BufNewFile,BufRead *.go :set ft=go
+    if has("gui_win32")
+        autocmd GUIEnter * simalt ~x
+    endif
 augroup END 
