@@ -29,8 +29,8 @@ set shiftwidth=4
 set expandtab
 set textwidth=80
 set cc=+1
-if has("gui_mac")
-    set guifont=Sauce\ Code\ Powerline\ 12
+if has("gui_macvim") || has("gui_vimr")
+    set guifont=Sauce\ Code\ Powerline:h12
 elseif has("gui_win32")
     set guifont=Sauce_Code_Powerline:h12
 endif
@@ -123,8 +123,6 @@ let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 
 """""""""""""""""""""""""""""" map
-imap jj <Esc>
-cmap jj <Esc>
 imap <c-s> <ESC>:w<cr>
 map <TAB> :bn<cr>
 map <Leader>c "+y
