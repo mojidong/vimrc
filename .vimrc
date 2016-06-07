@@ -29,11 +29,7 @@ set shiftwidth=4
 set expandtab
 set textwidth=80
 set cc=+1
-if has("gui_macvim") || has("gui_vimr")
-    set guifont=Sauce\ Code\ Powerline:h12
-elseif has("gui_win32")
-    set guifont=Sauce_Code_Powerline:h12
-endif
+set guifont=InputMono:h12
 syntax on
 let mapleader = ","
 let maplocalleader = ","
