@@ -35,32 +35,35 @@ let mapleader = ","
 let maplocalleader = ","
 
 """"""""""""""""""""""""""""""  vundle settings
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-rails'
-Plugin 'Yggdroot/indentLine'
-Plugin 'mileszs/ack.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'DrawIt'
-Plugin 'kien/ctrlp.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'scrooloose/nerdtree'
-Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'majutsushi/tagbar'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'Valloric/YouCompleteMe'
-call vundle#end()
-filetype plugin indent on
+" filetype off
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+call plug#begin('~/.vim/plugged')
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-rails'
+Plug 'Yggdroot/indentLine'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'DrawIt'
+Plug 'kien/ctrlp.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdtree'
+Plug 'mattn/emmet-vim'
+Plug 'scrooloose/syntastic'
+Plug 'majutsushi/tagbar'
+Plug 'altercation/vim-colors-solarized'
+Plug 'bling/vim-airline'
+Plug 'tomtom/tcomment_vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'sjl/gundo.vim'
+Plug 'Valloric/YouCompleteMe', {'do':'./install.py --clang-completer --gocode-completer'}
+Plug '~/.vim/plugged/v2'
+call plug#end()
+" call vundle#end()
+" filetype plugin indent on
 """"""""""""""""""""""""""""""  plugin settings
 " NERDTree
 let NERDTreeShowBookmarks=1
@@ -117,6 +120,9 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+
+" gundo
+map <F5> :GundoToggle<cr>
 
 """""""""""""""""""""""""""""" map
 imap <c-s> <ESC>:w<cr>
