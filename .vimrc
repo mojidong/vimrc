@@ -29,7 +29,13 @@ set shiftwidth=4
 set expandtab
 set textwidth=80
 set cc=+1
-set guifont=InputMono:h12
+if has("gui_mac")
+    set guifont=Sauce\ Code\ Powerline\ 12
+elseif has("gui_win32")
+    set guifont=Sauce_Code_Powerline:h12
+else
+    set guifont=Input\ Mono\ 12
+endif
 syntax on
 let mapleader = ","
 let maplocalleader = ","
@@ -46,7 +52,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'DrawIt'
+Plug 'vim-scripts/DrawIt'
 Plug 'kien/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
@@ -57,7 +63,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
 Plug 'tomtom/tcomment_vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'Lokaltog/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 Plug 'sjl/gundo.vim'
 Plug 'Valloric/YouCompleteMe', {'do':'./install.py --clang-completer --gocode-completer'}
 Plug '~/.vim/plugged/v2'
@@ -116,10 +122,26 @@ let g:airline_powerline_fonts = 1
 " vim-easy-align
 vnoremap <silent> <Enter> :EasyAlign<cr>
 
+" easymotion
+
+let g:EasyMotion_do_mapping = 0
+nmap s <Plug>(easymotion-s2)
+nmap t <Plug>(easymotion-t2)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+map <Leader>w <Plug>(easymotion-bd-w)
+map <Leader>f <Plug>(easymotion-bd-f)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 " gundo
 map <F5> :GundoToggle<cr>
