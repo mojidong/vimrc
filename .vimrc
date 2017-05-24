@@ -29,8 +29,8 @@ set shiftwidth=4
 set expandtab
 set textwidth=80
 set cc=+1
-if has("gui_mac")
-    set guifont=Sauce\ Code\ Powerline\ 12
+if has("gui_macvim")
+    set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete\ Mono:h12
 elseif has("gui_win32")
     set guifont=Sauce_Code_Powerline:h12
 else
@@ -66,7 +66,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
 Plug 'sjl/gundo.vim'
 Plug 'Valloric/YouCompleteMe', {'do':'./install.py --clang-completer --gocode-completer'}
-Plug '~/.vim/plugged/v2'
 call plug#end()
 " call vundle#end()
 " filetype plugin indent on
@@ -118,6 +117,7 @@ colo solarized
 
 " airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " vim-easy-align
 vnoremap <silent> <Enter> :EasyAlign<cr>
@@ -141,7 +141,6 @@ map <Leader>h <Plug>(easymotion-linebackward)
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
-let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 " gundo
 map <F5> :GundoToggle<cr>
@@ -149,6 +148,7 @@ map <F5> :GundoToggle<cr>
 """""""""""""""""""""""""""""" map
 imap <c-s> <ESC>:w<cr>
 map <TAB> :bn<cr>
+map <c-TAB> :bp<cr>
 map <Leader>c "+y
 map <Leader>v "+p
 
