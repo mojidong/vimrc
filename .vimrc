@@ -60,7 +60,8 @@ Plug 'mattn/emmet-vim'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'altercation/vim-colors-solarized'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-theme'
 Plug 'tomtom/tcomment_vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
@@ -144,6 +145,7 @@ let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 
 " gundo
 map <F5> :GundoToggle<cr>
+let g:gundo_prefer_python3=1
 
 """""""""""""""""""""""""""""" map
 imap <c-s> <ESC>:w<cr>
@@ -151,6 +153,7 @@ map <TAB> :bn<cr>
 map <c-TAB> :bp<cr>
 map <Leader>c "+y
 map <Leader>v "+p
+cmap w!! w !sudo tee %
 
 
 " In many terminal emulators the mouse works just fine, thus enable it.
