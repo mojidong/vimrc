@@ -30,7 +30,7 @@ set expandtab
 set textwidth=80
 set cc=+1
 if has("gui_macvim")
-    set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete\ Mono:h12
+    set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete\ Mono:h14
 elseif has("gui_win32")
     set guifont=Sauce_Code_Powerline:h12
 else
@@ -125,8 +125,8 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
 " easymotion
 
 let g:EasyMotion_do_mapping = 0
-nmap s <Plug>(easymotion-s2)
-nmap t <Plug>(easymotion-t2)
+let g:EasyMotion_smartcase = 1
+nmap s <Plug>(easymotion-w)
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 
