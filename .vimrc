@@ -126,7 +126,7 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
 
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
-nmap s <Plug>(easymotion-w)
+nmap s <Plug>(easymotion-bd-w)
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 
