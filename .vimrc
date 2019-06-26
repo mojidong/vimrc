@@ -66,6 +66,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
 Plug 'sjl/gundo.vim'
 Plug 'Valloric/YouCompleteMe', {'do':'./install.py --clang-completer --gocode-completer'}
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 " call vundle#end()
 " filetype plugin indent on
