@@ -53,7 +53,6 @@ Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-scripts/DrawIt'
-Plug 'kien/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdtree'
 Plug 'mattn/emmet-vim'
@@ -147,6 +146,9 @@ let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 " gundo
 map <F5> :GundoToggle<cr>
 let g:gundo_prefer_python3=1
+
+" fzf
+map <c-p> :Files<cr>
 
 """""""""""""""""""""""""""""" map
 imap <c-s> <ESC>:w<cr>
