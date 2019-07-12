@@ -130,6 +130,8 @@ let g:EasyMotion_smartcase = 1
 nmap s <Plug>(easymotion-bd-w)
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
 
 map <Leader>w <Plug>(easymotion-bd-w)
 map <Leader>f <Plug>(easymotion-bd-f)
