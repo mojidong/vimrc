@@ -47,7 +47,7 @@ let maplocalleader = ","
 call plug#begin('~/.vim/plugged')
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rails'
 Plug 'Yggdroot/indentLine'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-surround'
